@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         colorDiv.classList.add('individual', 'color');
         colorDiv.dataset.rgb = colorMetadata['rgb'];
         colorDiv.dataset.hex = colorMetadata['hex'];
+        colorDiv.dataset.name = colorMetadata.name;
         colorDiv.style.backgroundColor = colorMetadata['html-name'];
         tippy(
           colorDiv,
@@ -29,7 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
       colorContainers.forEach(c => {
         c.addEventListener('click', (event) => {
           if (event.target.classList.contains('individual', 'color')) {
-            navigator.clipboard.writeText(event.target.dataset.hex);
+            const metadata = event.target.dataset;
+            navigator.clipboard.writeText(metadata.hex);
+            Snackbar.show({ text: `HEX for '${metadata.name}' copied to the clipboard.` });
           }
         });
       })

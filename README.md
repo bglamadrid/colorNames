@@ -2,7 +2,7 @@
 
 Forked from [ekelseya/colorNames](https://github.com/ekelseya/colorNames).
 
-## Language/Tools used
+## Pages
 
 ### colors.html
 
@@ -18,3 +18,4 @@ A small webpage that dynamically fetches all available colors, arranges them, an
 *   CSS
 *   [RxJS 7](https://github.com/ReactiveX/rxjs)
 *   [Tippy.js](https://github.com/atomiks/tippyjs)
+*   [SnackBar](https://github.com/polonel/SnackBar)

@@ -5,7 +5,7 @@ const { finalize, switchMap, tap } = rxjs.operators;
 document.addEventListener('DOMContentLoaded', () => {
   const colorContainers = document.querySelectorAll('main .colors > div');
 
-  ajax.getJSON(`/color-rainbow.json`).pipe(
+  ajax.getJSON(`color-rainbow.json`).pipe(
     switchMap(rootNode => from(rootNode.colors)), // iterate through colors
     tap(colorMetadata => {
       colorContainers.forEach(c => {

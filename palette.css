@@ -1,0 +1,32 @@
+:root {
+  --color-block-size: 2rem;
+}
+
+main {
+  text-align: center;
+}
+
+.colors {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.colors .grid {
+  display: grid;
+  grid-template-columns: repeat(12, var(--color-block-size));
+}
+
+.colors .flex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  max-width: 800px;
+}
+
+.individual.color {
+  border: 1px rgba(255,255,255,0.7) solid;
+  width: var(--color-block-size);
+  height: var(--color-block-size);
+}
